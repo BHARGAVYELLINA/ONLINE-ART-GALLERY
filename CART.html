@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<head><title>CART</title>
+    <link rel="stylesheet" href="cart.html">
+</head>
+<body style="background-color: grey; background-image: url('<!-- IMAGE CHECK -->>'); background-repeat: no-repeat; background-size: contain;">
+    <ul>
+        <li class="nav" style="left: 50%;"><a href="LOGIN.html" >Login</a></li>
+        <li class="nav" style="left: 50%;"><a href="index.html" >Home</a></li>
+        <li class="nav" style="left: 50%;"><a href="GALLERY ENTRANCE.html" >MODERN ART</a></li>
+        <li class="nav" style="left: 50%;"><a href="Abstract.html">ABSTRACT ART</a></li>
+        <li class="nav" style="left: 50%;"><a href="medieval.html">MEDIEVAL ART</a></li>
+        <li class="nav" style="left: 50%;"><a href="street art.html">STREET ART</a></li>
+        <li class="nav" style="left: 50%;"><a href="SMM Surreal Art Gallery.html">SURREAL ART</a></li>
+        <li class="nav" style="float: right;"><a href="AboutUs.html" >About Us</a></li>
+        <li class="nav" style="float: right;"><a href="CART.html">Cart</a></li>
+      </ul>
+<style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 15px;
+            text-decoration: none;
+        }
+        li.nav {
+            float: left;
+        }
+        li a:hover{
+            color: black;
+            background-color: lightgray;
+        }
+.container {
+    margin-top: 250px;
+    top: 100%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: max-content;
+    padding: 50px;
+    box-shadow: 1px 5px 5px 5px green;
+    border-spacing: 25px;
+}
+button{
+    background-color: black;
+    color: white;
+}
+#item1:hover {
+    transition: 0.5s;
+    background-color: aqua;
+}
+#item2:hover {
+    transition: 0.5s;
+    background-color: BurlyWood;
+}
+#item3:hover {
+    transition: 0.5s;
+    background-color: Tomato;
+}
+#item4:hover {
+    transition: 0.5s;
+    background-color: CadetBlue;
+}
+#item5:hover {
+    transition: 0.5s;
+    background-color: Crimson;
+}
+#item6:hover {
+    transition: 0.5s;
+    background-color: DarkGreen;
+}
+#item7:hover {
+    transition: 0.5s;
+    background-color: white;
+}
+#item8:hover {
+    transition: 0.5s;
+    background-color: DarkSalmon;
+}
+#item9:hover {
+    transition: 0.5s;
+    background-color: DarkSlateGrey;
+}
+#item10:hover {
+    transition: 0.5s;
+    background-color: DarkViolet;
+}
+#item11:hover {
+    transition: 0.5s;
+    background-color: DeepSkyBlue;
+}
+#item12:hover {
+    transition: 0.5s;
+    background-color: DimGrey;
+}
+#item13:hover {
+    transition: 0.5s;
+    background-color: Khaki;
+}
+#item14:hover {
+    transition: 0.5s;
+    background-color: Plum;
+}
+#item15:hover {
+    transition: 0.5s;
+    background-color: Pink;
+}
+.card{
+    border: 3px solid yellow;
+    width: max-content;
+    text-align: center;
+    display: inline-block;
+    margin: 5px;
+}
+.card img {
+    width: 300px;
+    padding: 5px;
+}
+.cart{
+    width: 400px;
+    height: 1800px;
+    float: right;
+    text-align: center;
+    border: 5px solid red;
+    overflow-y: scroll;
+}
+.cartimg>img{
+    border: 5px solid white;
+    width: 200px;
+    height: 200px;
+}
+</style>
+
+<div class="container">
+<div class="card" id="item1">
+    <img src="https://i0.wp.com/autopost.joanmedina.es/uploads/gallery/articles/8248496028/5868729986.jpg?w=800&ssl=1" height="200px" width="200px">
+    <div class="title"><u> ART1 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- BYZANTINE ART</li>
+        <div class="price">
+        <li>Art Price:- 50k</li></div>
+        <li>Artist:- Vincent Van Gogh</li>
+    </ul>
+    </div>
+    <button onclick="cart(item1)">ADD TO CART</button>
+</div>
+<div class="card" id="item2">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCg_nf6Nw8Tfm81eAw4AXsJuuE9fYqx2OCqw&usqp=CAU" height="200px" width="200px">
+    <div class="title"><u> ART2 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- ROMANESQUE ART</li>
+        <div class="price">
+        <li>Art Price:- 75k</li></div>
+        <li>Artist:- Edgar Degas</li>
+    </ul>
+    </div>
+    <button onclick="cart(item2)">ADD TO CART</button>
+</div>
+<div class="card" id="item3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjjG7AVt7Tyc2sw_1WB6NKBj_09cX8J18FBg&usqp=CAU" height="200px" width="200px">
+    <div class="title"><u> ART3 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- GOTHIC ART</li>
+        <div class="price">
+        <li>Art Price:- 150k</li></div>
+        <li>Artist:- Gustav Klimt</li>
+    </ul>
+    </div>
+    <button onclick="cart(item3)">ADD TO CART</button>
+</div>
+<br>
+<div class="card" id="item4">
+    <img src="https://m.media-amazon.com/images/I/61HsqO1Y-PL._SX300_SY300_QL70_FMwebp_.jpg" height="200px" width="200px">
+    <div class="title"><u> ART4 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- The Magmacious Faces</li>
+        <div class="price">
+        <li>Art Price:- 250k</li></div>
+        <li>Artist:- Salvador Dali</li>
+    </ul>
+    </div>
+    <button onclick="cart(item4)">ADD TO CART</button>
+</div>
+<div class="card" id="item5">
+    <img src="https://i.etsystatic.com/26444570/r/il/50de82/3546699860/il_794xN.3546699860_3why.jpg" height="200px" width="200px">
+    <div class="title"><u> ART5 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- The Insterstellar</li>
+        <div class="price">
+        <li>Art Price:- 50k</li></div>
+        <li>Artist:- Michael Landy</li>
+    </ul>
+    </div>
+    <button onclick="cart(item5)">ADD TO CART</button>
+</div>
+<div class="card" id="item6">
+    <img src="https://art.rtistiq.com/en-us/_next/image?url=https%3A%2F%2Fd28jbe41jq1wak.cloudfront.net%2FBlogsImages%2Fabstract_art_Compressed_638250928944386407.jpg&w=828&q=75" height="200px" width="200px">
+    <div class="title"><u> ART6 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- Infinitum</li>
+        <div class="price">
+        <li>Art Price:- 50k</li></div>
+        <li>Artist:- Shepard Fairey</li>
+    </ul>
+    </div>
+    <button onclick="cart(item6)">ADD TO CART</button>
+</div>
+<br>
+<div class="card" id="item7">
+    <img src="Exhibit-1.jpg" height="200px" width="200px">
+    <div class="title"><u> ART7 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- Bulb in the Desert</li>
+        <div class="price">
+        <li>Art Price:- 350k</li></div>
+        <li>Artist:- Jorgi</li>
+    </ul>
+    </div>
+    <button onclick="cart(item7)">ADD TO CART</button>
+</div>
+<div class="card" id="item8">
+    <img src="Exhibit-2.jpg" height="200px" width="200px">
+    <div class="title"><u> ART8 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- ThunderClouds</li>
+        <div class="price">
+        <li>Art Price:- 50k</li></div>
+        <li>Artist:- Picky Piccasso</li>
+    </ul>
+    </div>
+    <button onclick="cart(item8)">ADD TO CART</button>
+</div>
+<div class="card" id="item9">
+    <img src="Exhibit-3.jpg" height="200px" width="200px">
+    <div class="title"><u> ART9 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- Kid in the Rain</li>
+        <div class="price">
+        <li>Art Price:- 20k</li></div>
+        <li>Artist:- JJ Olatunji</li>
+    </ul>
+    </div>
+    <button onclick="cart(item9)">ADD TO CART</button>
+</div>
+<br>
+<div class="card" id="item10">
+    <img src="https://d7hftxdivxxvm.cloudfront.net/?resize_to=fit&width=300&height=366&quality=80&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2Fw-nN_nVOi-vq24E6-8ezwg%2Flarge.jpg" height="200px" width="200px">
+    <div class="title"><u> ART10 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- Wild Kong Tag</li>
+        <div class="price">
+        <li>Art Price:- 50k</li></div>
+        <li>Artist:- Richard Orlinski</li>
+    </ul>
+    </div>
+    <button onclick="cart(item10)">ADD TO CART</button>
+</div>
+<div class="card" id="item11">
+    <img src="https://d7hftxdivxxvm.cloudfront.net/?resize_to=fit&width=300&height=379&quality=80&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2Fn_BDFJE2JpxlAX9n2AV9Qw%2Flarge.jpg" height="200px" width="200px">
+    <div class="title"><u> ART11 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- Précieuse Confiance</li>
+        <div class="price">
+        <li>Art Price:- 25k</li></div>
+        <li>Artist:- NEBAY</li>
+    </ul>
+    </div>
+    <button onclick="cart(item11)">ADD TO CART</button>
+</div>
+<div class="card" id="item12">
+    <img src="https://d7hftxdivxxvm.cloudfront.net/?resize_to=fit&width=300&height=323&quality=80&src=https%3A%2F%2Fd32dm0rphc51dk.cloudfront.net%2FAVoJTM38vzsA-8SDqSIFww%2Flarge.jpg" height="200px" width="200px">
+    <div class="title"><u> ART12 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- Famous Blue Mona</li>
+        <div class="price">
+        <li>Art Price:- 50k</li></div>
+        <li>Artist:- Jisbar</li>
+    </ul>
+    </div>
+    <button onclick="cart(item12)">ADD TO CART</button>
+</div>
+<br>
+<div class="card" id="item13">
+    <img src="art1.jpg" height="200px" width="200px">
+    <div class="title"><u> ART13 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- The Ancient and The Timeless</li>
+        <div class="price">
+        <li>Art Price:- 30k</li></div>
+        <li>Artist:- Rembrandt</li>
+    </ul>
+    </div>
+    <button onclick="cart(item13)">ADD TO CART</button>
+</div>
+<div class="card" id="item14">
+    <img src="art2.jpg" height="200px" width="200px">
+    <div class="title"><u> ART14 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- The Gatekeepers</li>
+        <div class="price">
+        <li>Art Price:- 50k</li></div>
+        <li>Artist:-  Albrecht Dürer</li>
+    </ul>
+    </div>
+    <button onclick="cart(item14)">ADD TO CART</button>
+</div>
+<div class="card" id="item15">
+    <img src="art3.jpg" height="200px" width="200px">
+    <div class="title"><u> ART15 </u></div>
+    <div>
+    <ul>
+        <li>Art Name:- Frozen in Time</li>
+        <div class="price">
+        <li>Art Price:- 50k</li></div>
+        <li>Artist:- Michelangelo</li>
+    </ul>
+    </div>
+    <button onclick="cart(item15)">ADD TO CART</button>
+</div>
+</div>
+
+<div class="cart" id="cart">
+    <div class="title"><u><i><b>CART</b></i></u></div><br><a href="PAYMENT.html" ><button>PAYMENT</button></a><hr/>
+    <div id="title"></div>
+</div>
+
+<script>
+    var additemid=0;
+    function cart(item){
+        additemid+=1;
+        var selectedItem=document.createElement('div');
+        selectedItem.classList.add('cartimg');
+        selectedItem.setAttribute('id',additemid);
+        var img=document.createElement('img');
+        img.setAttribute('src',item.children[0].currentSrc);
+        var title=document.createElement('div');
+        title.innerText=item.children[1].innerText;
+        var price=document.createElement('div');
+        price.innerText=item.children[2].innerText;
+        var cartitems=document.getElementById('title');
+        var delBtn= document.createElement('button');
+        delBtn.innerText = 'Delete';
+        delBtn.setAttribute('onclick','del('+additemid+')');
+        selectedItem.append(img);
+        selectedItem.append(title);
+        selectedItem.append(price);
+        selectedItem.append(delBtn);
+        cartitems.append(selectedItem);
+    }
+        
+    function del(item){
+        document.getElementById(item).remove();
+    }
+</script>
+
+</body>
+</html>
