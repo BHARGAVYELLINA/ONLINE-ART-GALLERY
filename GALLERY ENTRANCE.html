@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head><title>MODERN ART</title></head>
+<body>
+
+    <style>
+        .entry{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .entry video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .content{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 1px 1px 1px 1px orangered;
+        }
+    </style>
+
+    <div class="entry">
+    <video src="entry.mp4" autoplay muted loop></video>
+    <div class="content">
+        <a href="MODERN ART.html" >
+        <button type="button" value="go" style="background-color: black; color: orange; width: auto; height: 30px;" title="MODERN ART GALLERY">ENTER MODERN-ART GALLERY</button>
+        </a>
+    </div>
+    </div>
+</body>
+</html>

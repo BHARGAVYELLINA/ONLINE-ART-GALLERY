@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <head>
+        <title >Surreal Art Gallery</title>
+
+        <link rel="icon" type="image/xicon" href="surreal-icon.jpg">
+
+    </head> 
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Ubuntu|Cairo|Lobster|
+    Noto-sans|&effect=Neon|">
+    <link href="https://fonts.googleapis.com/css2?family=Water+Brush&display=swap" rel="stylesheet">
+    
+    <script>
+        function setColor(btn, color){
+            var count=1;
+            var property = document.getElementById(btn);
+            if (count == 0){
+                property.style.backgroundColor = "white"
+                count=1;        
+            }
+            else{
+                property.style.backgroundColor = "#fe2c54"
+                count=0;
+            }
+        
+        }
+
+        function setColor1(btn, color){
+            var count=1;
+            var property = document.getElementById(btn);
+            if (count == 0){
+                property.style.backgrouhowndColor = "white"
+                count=1;        
+            }
+            else{
+                property.style.backgroundColor = "#4FBF26"
+                count=0;
+            }
+        
+        }
+    </script>
+
+
+    <style>
+
+        header {
+
+            width: 100%;
+            height: 225px;
+            background-color: black;
+
+            
+
+            border-radius: 15px;
+            
+
+            display: inline-block;
+            position: relative;
+
+            padding: 15px;
+            color: azure;
+            font-size: 60px;
+            margin-right: 20px;
+        }
+
+        header .wh-img {
+
+            display: none;
+            
+            
+
+        }
+        header:hover .wh-img {
+
+            display: inline-block;
+            
+        }
+
+        header:hover .bk-img {
+
+            display: none;
+            
+        }
+
+        header:hover {
+
+            background-color: rgb(255, 255, 255);
+            color: black;        
+
+        }
+
+        nav ul {
+
+            list-style: none;
+        }
+
+        nav ul li {
+
+            display: inline;
+            position: relative;
+            padding: 15px;
+        }
+
+        nav ul li a {
+
+            text-decoration: none;
+            color:white;
+            transition-delay: 300ms;
+            transition-timing-function: ease-in;
+        }
+
+        header:hover nav ul li a {
+
+            text-decoration: none;
+            color:rgb(0, 0, 0);
+            transition-delay: 300ms;
+            transition-timing-function: ease-in;
+        }
+
+        aside {
+
+            background-color: bisque;
+
+        }
+
+        div.data-head {
+
+            text-align: center;
+            letter-spacing: 3px;
+            word-spacing: 5px;
+            padding-top: 30px;
+            
+
+            font-family: "Lobster";
+            font-size: 45px;
+            font-weight: 200;
+            color:black;
+    
+        }
+
+        #data {
+
+            padding-left: 300px;
+            padding-right: 300px;
+            font-family:"Cairo";
+            letter-spacing: 5px;
+
+        }
+        
+        .image-gallery {
+
+            width: 100%;
+            height: 6100px;
+            background-color: rgb(242, 139, 80);
+
+            border-radius: 8px;
+
+
+        }
+
+        #icon {
+
+            font-size: 75px;
+            padding-left: 35px;
+            display: inline;
+            letter-spacing: -9px;
+        }
+
+        #image {
+
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            
+            border-radius: 10px;
+
+        }
+
+        .column {
+
+            width: 50%;
+            height: 500px;
+            padding: 10px;
+            border-radius: 10px;
+
+            float: left;
+
+            box-sizing: border-box;
+
+
+        }
+
+        .row {
+
+            display: table;
+            width: 100%;
+            height: 350px;
+            padding: 20px;
+            border-radius: 10px;
+
+            
+            box-sizing: border-box;
+
+        }
+
+        div #exhibit {
+
+            width: 95%;
+            height: 467px;
+            padding-top: 5px;
+            padding-left: 15px;
+            margin-left: 15px;
+
+            background-color: bisque;
+            border-radius: 10px;
+            border-style: double;
+            border-width: 5px;
+            border-spacing: 10px;
+
+            font-size: 20px;
+            font-family:"Ubuntu";
+            
+
+        }
+
+        .addToCart {
+
+            width: 300px;
+            height: 100px;
+
+            
+
+            font-family: "Ubuntu";
+            font-size: 40px;
+            
+            
+            background-color: bisque;
+            border: none;
+
+            float: right;
+            margin-right: 30px;
+
+            border-radius: 8px;
+        }
+
+        footer {
+
+            width: 100%;
+            height: 130px;
+            background-color: bisque;
+            border-radius: 10px;
+
+            font-family: "Merriweather";
+            font-size: 20px;
+            text-align: center;
+            color: rgb(79, 76, 76);
+
+
+        }
+
+        p #name {
+
+            font-family: 'Water Brush,cursive';
+            font-size: 25px;
+
+
+        }
+
+        body{
+            margin: 0%;
+        }
+    </style>
+
+    <body >
+        <!-- Header Section and Navbar -->
+        <header >
+            
+            <span style="font-family:Merriweather"> Surreal Art Gallery </span>
+            <img class="bk-img" align="right" src="surreal-icon.jpg" alt="surreal-logo" width="200px" height="150px">
+            <img class="wh-img" align="right" src="surreal-icon-white.jpg" alt="surreal-logo" width="200px" height="150px">
+            
+            <nav >
+                <span style="text-align: center;font-family:Ubuntu;">
+                <ul>
+                    <li><a style="font-size: 25px;" href="index.html"  alt="Home">Home</a></li>
+                    <li><a style="font-size: 25px;" href="GALLERY ENTRANCE.html" >MODERN ART</a></li>
+                    <li><a style="font-size: 25px;" href="Abstract.html" >ABSTRACT ART</a></li>
+                    <li><a style="font-size: 25px;" href="medieval.html" >MEDIEVAL ART</a></li>
+                    <li><a style="font-size: 25px;" href="street art.html" >STREET ART</a></li>
+                    <li><a style="font-size: 25px;" href="#view-art" alt="View Art">SURREAL ART</a></li>
+                    <li><a style="font-size: 25px;" href="CART.html" >Cart</a></li>
+                    <li><a style="font-size: 25px;" href="AboutUs.html" >About Us</a></li>
+                </ul>
+                </span>
+            </nav>
+
+        </header>
+        <!-- Intro -->
+        <section style="background-image: url(beige-background.jpg);width: 100%;" >
+
+            <div class="data-head">
+                <p>What is Surrealism?</p><br>
+
+                <p id="data">
+                    <i><strong>Surrealism </strong>
+                    is one of the highly versatile genre of Arts 
+                    favoured by Incredible Artists depicting bizarre and dreamlike
+                    emotions by pushing the boundaries of imagination.
+                    </i>
+                </p>
+            
+                <br><hr color="black"><br>
+
+                <span >&#10077;</span> 
+                <p><i>"A True Artist is not one who is inspired, 
+                    but the one who Inspires others"</i></p>
+                
+                <br><hr color="black">
+            
+            </div>
+            
+        </section>
+
+        <!-- Image Gallery-->
+
+        <section class="image-gallery">
+
+            <h1 style="font-family: Ubuntu;text-align: center;font-size: 45px;
+            padding-top: 15px;" id="view-art">
+                View Art</h1>
+
+            <!-- Exhibit-1 -->
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-1.jpg" alt="Surreal 1" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 1</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> Bulb in the Desert</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Jorgi</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">There is a Panda under water eating something
+                                It lives near whitehouse. Infact it lives in a bulb lying in the desert. Mind Blowing everytime when seen.</p>
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 4,000/-</p><br>
+                        
+                        
+                    
+                        <button id="heart1" type="button" onclick="setColor('heart1','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart1"class="addToCart" onclick="setColor1('addToCart1','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibit-2 -->
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-2.jpg" alt="Surreal 2" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 2</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> ThunderClouds</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Picky Piccasso</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">Surreal Natural Phenomena on Palm.
+                                 Yet Potraits the fact that the World is in our Hands.</p>
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 8,000/-</p><br>
+                        
+                        
+                    
+                        <button id="heart2" type="button" onclick="setColor('heart2','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart2"class="addToCart" onclick="setColor1('addToCart2','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Exhibit-3 -->
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-3.jpg" alt="Surreal 3" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 3</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> Kid in the Rain</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> JJ Olatunji</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">Where are your Parents? Realistic Kid Drawing
+                             Enjoying in the Rain Driving his Umbrella with an Umbrella. </p>
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 2,000/-</p><br>
+                        
+                        
+                    
+                        <button id="heart3" type="button" onclick="setColor('heart3','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart3"class="addToCart" onclick="setColor1('addToCart3','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibit-4 -->
+
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-4.jpg" alt="Surreal 4" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 4</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong>Chessman Gentlemen</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Unknown</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">
+                            Is it  Grinch or a Tree in a Formal-Suit? But, You'll Never
+                             Know Why is he Standing on a Chessboard! 
+                            </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 18,000/-</p><br>
+                        
+                        
+                    
+                        <button id="heart4" type="button" onclick="setColor('heart4','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart4"class="addToCart" onclick="setColor1('addToCart4','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Exhibit-5 -->
+
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-5.jpg" alt="Surreal 5" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 5</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> Elephant Tightrope</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Mr. Mike Krack Jr.</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">
+                            You Get the Jist. Painted in 2010.
+                            </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 6,500/-</p><br>
+                        
+                        
+                    
+                        <button id="heart5" type="button" onclick="setColor('heart5','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart5"class="addToCart" onclick="setColor1('addToCart5','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Exhibit-6 -->
+
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-6.jpg" alt="Surreal 6" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 6</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> TurtleBack</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Mrs. Jane Dough</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">
+                            Turtle Desperate to Swim in the Ocean... What is Stopping him
+                             Back Though? 2000 km<sup>2</sup> worth of Forest Area + 2 Elephants.
+                            </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 189,000/-</p><br>
+                        
+                        
+                    
+                        <button id="heart6" type="button" onclick="setColor('heart6','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart6"class="addToCart" onclick="setColor1('addToCart6','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibit-7 -->
+
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-7.jpg" alt="Surreal 7" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 7</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> HotCloudBalloon</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Mr. Hotè Sameul</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">
+                            An Amazing Piece of Thoughtful Art.    (Editor's Choice)
+                            </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 899,999/-</p><br>
+                        
+                        
+                    
+                        <button id="heart7" type="button" onclick="setColor('heart7','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart7"class="addToCart" onclick="setColor1('addToCart7','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibit-8 -->
+
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-8.jpg" alt="Surreal 8" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 8</strong>
+                            <br>
+  
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> The American Dream</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> George Simeon</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">
+                            The American Dream. Forget Liberty, this is the Future.
+                            
+                            </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 9,000/-</p><br>
+                        
+                        
+                    
+                        <button id="heart8" type="button" onclick="setColor('heart8','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart8"class="addToCart" onclick="setColor1('addToCart8','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibit-9 -->
+
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-9.jpg" alt="Surreal 9" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 9</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> Blue Thunder</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Jorgi</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">
+                            White Birdies Flying in Front of the Blue Storm to reach its home,
+                             the Gulmohar Tree, which lies on a water body which disobeys all laws of
+                              Gravity.
+                            
+                            </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 41,000/-</p><br>
+                        
+                        
+                    
+                        <button id="heart9" type="button" onclick="setColor('heart9','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart9"class="addToCart" onclick="setColor1('addToCart9','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibit-10 -->
+
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-10.jpg" alt="Surreal 10" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 10</strong>
+                            <br>
+  
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> Survival of the Squirrels</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Mrs. Jane Dough</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong>
+                            <p style="margin-left: 30px;margin-right: 30px;">
+                                Simply Stunning... OMG It's so Funny Looking HAHA!
+                            
+                            </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 1,690/-</p><br>
+                        
+                        
+                    
+                        <button id="heart10" type="button" onclick="setColor('heart10','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart10"class="addToCart" onclick="setColor1('addToCart10','white')">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Exhibit-11 -->
+
+            <div class="row">
+                
+
+                <div class="column">
+
+                    <img src="Exhibit-11.jpg" alt="Surreal 11" width="100%" height="100%" >
+
+                </div>
+
+                <div class="column">
+
+                    <div id="exhibit">
+                        
+                        <p>
+                            <strong style="font-family: Ubuntu;
+                            font-size: 29px;
+                            text-decoration: underline;letter-spacing: 3px;">Exhibit Number 11</strong>
+                            <br>
+
+                            
+                            
+                            
+                        </p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Name of Art :</strong> Fairy Angel</p>
+                        
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Artist :</strong> Mrs. Margaret</p>
+
+                        <p id="exhibit-header" style="text-indent: 30px;margin-right: 45px;">
+                            <strong>Description :</strong><br>
+                            <p style="margin-left: 30px;margin-right: 30px;">
+                                Experience consciously created through an expression of skill or imagination
+                            
+                            </p>
+                            
+
+                        <p id="exhibit-header" style="text-indent: 30px;font-family: Ubuntu;">
+                            <strong>Price :</strong> $ 1,439,000/- (Estimate)</p><br>
+                        
+                        
+                    
+                        <button id="heart11" type="button" onclick="setColor('heart11','white')"
+                        style="background-color: bisque;border: none;display: inline-block;border-radius: 8px;">
+
+                            <img src="heart.svg" alt="heart-svg" width="200px" height="100px"> 
+
+                        </button>
+
+                        <a href="CART.html" >
+                        <button id="addToCart11"class="addToCart">
+                            Add to Cart
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <footer>
+
+            <p>Website Creator : 
+                <p id="Name">
+                    Sai Mohnish M<br>
+                    +91 9486653577<br>
+                    <a href="mailto:mohnisuhsai@gmail.com">mohnisuhsai@gmail.com</a>
+                </p>
+            </p>
+
+        </footer>
+
+
+
+
+    </body>
+
+</html>
+    
